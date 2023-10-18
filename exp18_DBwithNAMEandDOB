@@ -1,0 +1,7 @@
+
+person('Alice', date(28, 2, 1990)).
+person('Bob', date(12, 12, 1985)).
+person('Charlie', date(30, 7, 1975)).
+
+dob(Name, DOB) :-
+    person(Name, DOB).
