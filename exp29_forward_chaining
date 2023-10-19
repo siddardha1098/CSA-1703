@@ -1,0 +1,20 @@
+has_fur(dog).
+has_fur(cat).
+has_feathers(bird).
+lays_eggs(bird).
+gives_milk(dog).
+gives_milk(cat).
+warm_blooded(dog).
+warm_blooded(cat).
+warm_blooded(bird).
+
+
+mammal(X) :- has_fur(X), gives_milk(X), warm_blooded(X).
+
+
+infer_mammal(X) :- mammal(X), write(X), write(' is a mammal.'), nl.
+
+
+find_mammals :- infer_mammal(X), fail.
+
+is_mammal(X) :- mammal(X), write(X), write(' is a mammal.'), nl.
