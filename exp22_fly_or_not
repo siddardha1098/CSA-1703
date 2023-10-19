@@ -1,0 +1,8 @@
+bird(canary, yes).
+bird(penguin, no).
+bird(sparrow, yes).
+bird(ostrich, no).
+bird(eagle, yes).
+bird(emu, no).
+can_fly(Bird) :- bird(Bird, yes).
+cannot_fly(Bird) :- bird(Bird, no).
