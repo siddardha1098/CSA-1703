@@ -1,0 +1,10 @@
+% Facts about fruit-color relationships
+fruit_color(apple, red).
+fruit_color(banana, yellow).
+fruit_color(grape, green).
+fruit_color(grape, purple).
+fruit_color(orange, orange).
+
+find_color(Fruit, Color) :-
+    fruit_color(Fruit, Color),
+    write(Fruit), write(' is '), write(Color), write('.'), nl.
