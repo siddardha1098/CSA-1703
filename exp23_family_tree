@@ -1,0 +1,19 @@
+male(john).
+male(bob).
+male(james).
+male(michael).
+female(susan).
+female(lisa).
+female(emma).
+
+parent(john, bob).
+parent(john, lisa).
+parent(susan, bob).
+parent(bob, james).
+parent(bob, emma).
+parent(lisa, michael).
+
+father(X, Y) :- male(X), parent(X, Y).
+mother(X, Y) :- female(X), parent(X, Y).
+child(X, Y) :- parent(Y, X).
+sibling(X, Y) :- parent(Z, X), parent(Z, Y), X \= Y.
