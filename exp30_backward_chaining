@@ -1,0 +1,17 @@
+has_membership(john, gold).
+has_membership(lisa, silver).
+has_membership(jane, gold).
+has_membership(eric, silver).
+has_membership(anna, silver).
+has_purchase_history(john, 5000).
+has_purchase_history(lisa, 3000).
+has_purchase_history(jane, 2500).
+has_purchase_history(eric, 1500).
+has_purchase_history(anna, 2200).
+
+eligible_for_discount(Person) :-
+    has_membership(Person, gold).
+eligible_for_discount(Person) :-
+    has_membership(Person, silver),
+    has_purchase_history(Person, Amount),
+    Amount >= 2000.
