@@ -1,0 +1,11 @@
+student(john, math, 101).
+student(lisa, history, 102).
+student(mike, science, 103).
+student(susan, math, 104).
+
+teacher(prof_smith, math, 201).
+teacher(prof_jones, history, 202).
+teacher(prof_doe, science, 203).
+
+teaches_subject(Teacher, Subject) :- teacher(Teacher, Subject, _).
+student_taking_subject(Student, Subject) :- student(Student, Subject, _).
